@@ -1,4 +1,14 @@
 package com.example.mvvmTrendingGit
 
-class MvvmTrendingGit {
+import android.app.Application
+
+class MvvmTrendingGit: Application() {
+    override fun onCreate() {
+        super.onCreate()
+        instance = this
+    }
+
+    companion object {
+        lateinit var instance: MvvmTrendingGit
+    }
 }
